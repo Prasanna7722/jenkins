@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+    <div className="container">
+      <h1>🚀 CI/CD Overview</h1>
+      
+      <section className="card">
+        <h2>✅ Continuous Integration (CI)</h2>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          CI is the practice of frequently integrating code changes into a shared repository.
+          Each commit triggers an automated build and test process to detect errors early.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      </section>
+
+      <section className="card">
+        <h2>📦 Continuous Delivery (CD)</h2>
+        <p>
+          CD ensures that your software is always in a deployable state.
+          After CI passes, code is automatically packaged and deployed to a staging environment.
+        </p>
+      </section>
+
+      <section className="card">
+        <h2>⚡ Continuous Deployment</h2>
+        <p>
+          This takes Continuous Delivery a step further by automatically deploying
+          every change that passes the pipeline directly to production without manual approval.
+        </p>
+      </section>
+
+      <footer>
+        <p>Built with ❤️ using React + Vite</p>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
